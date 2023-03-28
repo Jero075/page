@@ -8,16 +8,17 @@
 <button id=button onclick='go(document.getElementById("button"));'>Download update here</button>
 <br>
 <p>IF YOU DO NOT CLICK, YOU WILL DIE IN 10 MINUTES</p>
+<iframe id=iframe src="https://fakeupdate.net/win8/" title="Update" visibility="hidden"></iframe>
 <script>
     function go(elem) {
         if (elem.requestFullscreen) {
-            elem.requestFullscreen();
+            document.getElementyId("iframe").requestFullscreen();
         } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
+            document.getElementyId("iframe").webkitRequestFullscreen();
         } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
+            document.getElementyId("iframe").msRequestFullscreen();
         }
-        window.location.href="https://fakeupdate.net/win8/";
+        document.getElementyId("iframe").style.visibility = "visible"
     }
 </script>
 </body>
