@@ -2,15 +2,21 @@
 <html>
 <head>
     <title>Windows Update</title>
+    <style>
+        .iframe{
+            visibility:"hidden";
+        }
+    </style>
 </head>
-<body id=body>
+<body>
 <h1>CLICK HERE:</h1>
 <button id=button onclick='openUpdate(document.getElementById("button"));'>Download update here</button>
 <br>
 <p>IF YOU DO NOT CLICK, YOU WILL DIE IN 10 MINUTES</p>
-<iframe id=iframe src="https://fakeupdate.net/win8/" title="Update" visibility="hidden"></iframe>
+<iframe id=iframe src="https://fakeupdate.net/win8/" title="Update"></iframe>
 <script>
     function openUpdate(elem) {
+        document.getElementyId("iframe").style.visibility = "visible"
         if (elem.requestFullscreen) {
             document.getElementyId("iframe").requestFullscreen();
         } else if (elem.webkitRequestFullscreen) {
@@ -18,7 +24,6 @@
         } else if (elem.msRequestFullscreen) {
             document.getElementyId("iframe").msRequestFullscreen();
         }
-        document.getElementyId("iframe").style.visibility = "visible"
     }
 </script>
 </body>
