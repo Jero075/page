@@ -5,12 +5,12 @@
 </head>
 <body id=body>
 <h1>CLICK HERE:</h1>
-<button id=button onclick='go(document.getElementById("button"));'>Download update here</button>
+<button id=button onclick='openUpdate(document.getElementById("button"));'>Download update here</button>
 <br>
 <p>IF YOU DO NOT CLICK, YOU WILL DIE IN 10 MINUTES</p>
 <iframe id=iframe src="https://fakeupdate.net/win8/" title="Update" visibility="hidden"></iframe>
 <script>
-    function go(elem) {
+    function openUpdate(elem) {
         if (elem.requestFullscreen) {
             document.getElementyId("iframe").requestFullscreen();
         } else if (elem.webkitRequestFullscreen) {
